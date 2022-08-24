@@ -1,6 +1,6 @@
 <!-- Collect tags from all errors -->
 {%- assign tags = blank -%}
-{%- for error in site.errors -%}
+{%- for error in site.error -%}
   {%- assign error_tags = error.tags | join:'|' | append:'|' -%}
   {%- if error_tags != '|' -%}
     {%- assign tags = tags | append:error_tags -%}
@@ -13,7 +13,7 @@
 <div class="py-3">
   <h4 id="{{ tag | slugify }}">{{ tag }}</h4>
   <ol>
-  {% for error in site.errors %}
+  {% for error in site.error %}
     {%- if error.tags contains tag -%}
       {%- if error.external_url -%}
         {%- assign url = error.external_url -%}
