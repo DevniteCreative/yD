@@ -1,7 +1,40 @@
 
 <div class="card-columns m-3 mt-5">
 
-  <!-- Local Docs -->
+  <!-- Remote docs -->
+  {% for remote_docs in page.remote_docss %}
+
+    {%- for repo in site.github.public_repositories -%}
+
+      {%- if remote_docs == repo.name -%}
+
+        {%- assign docs = repo -%}
+        {%- assign words = docs.name | split: '-' -%}
+        
+        {%- capture titlecase -%}
+          {%- for word in words -%}
+            {{ word | capitalize | append: ' ' }}
+          {%- endfor -%}
+        {%- endcapture -%}
+
+        {%- assign docs_type  = "remote" -%}
+        {%- assign docs_id    = docs.name -%}
+        {%- assign docs_img   = false -%}
+        {%- assign docs_name  = titlecase | strip -%}
+        {%- assign docs_desc  = docs.description -%}
+        {%- assign docs_url   = docs.html_url -%}
+        {%- assign docs_tools = docs.topics -%}
+        {%- assign external      = true -%}
+
+        {% include docs/docs-card.html %}
+
+      {%- endif -%}
+
+    {%- endfor -%}
+
+  {% endfor %}
+
+  <!-- Local docss -->
   {% for docs in site.docs %}
 
     {%- assign docs_type  = "local" -%}
