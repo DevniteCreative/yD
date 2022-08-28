@@ -21,6 +21,7 @@ nav_exclude:                                            # The following paths ar
   - pages/404.html
   - pages/index.md
   - documentation/partials/**                           # For Documentation Only
+  - pages/docs.html
 
 
 ### Author Info ###
@@ -56,9 +57,12 @@ permalink: /blog/:title
 collections:
   projects:
     output: true
-    permalink: /projects/:name
+    permalink: /support/:name
   elements:                                             # For Documentation Only
     output: true                                        # For Documentation Only
+  docs:
+    output: true
+    permalink: /support/app/:name
 
 
 ### Disqus ###

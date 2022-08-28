@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
-  spec.name                    = "portfolyou-jekyll-theme"
-  spec.version                 = "2.3.0"
-  spec.authors                 = ["Youssef Raafat"]
-  spec.email                   = ["YoussefRaafatNasry@gmail.com"]
+  spec.name                    = "rhinestone-jekyll-theme"
+  spec.version                 = "1.0.1"
+  spec.authors                 = ["Devnite Creative"]
+  spec.email                   = ["tfnlmfao@gmail.com"]
 
-  spec.summary                 = "A beautiful portfolio Jekyll theme."
-  spec.homepage                = "https://github.com/YoussefRaafatNasry/portfolYOU"
+  spec.summary                 = "Just a test theme for github pages!"
+  spec.homepage                = "https://github.com/DevniteCreative/Rhinestone"
   spec.license                 = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
