@@ -37,6 +37,7 @@
           }
 
           const data = await response.json();
+          const error = await response.json();
           console.log(data);
           document.getElementById("response").innerHTML = "Ticket erfolgreich gesendet!";
         } catch (error) {
